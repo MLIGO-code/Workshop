@@ -1,0 +1,21 @@
+sylius_grid:
+    templates:
+        action:
+            default: "@SyliusShop/Ui/Resources/views/Grid/Action/default.html.twig"
+            create: "@SyliusShop/Ui/Resources/views/Grid/Action/create.html.twig"
+            delete: "@SyliusShop/Ui/Resources/views/Grid/Action/delete.html.twig"
+            show: "@SyliusShop/Ui/Resources/views/Grid/Action/show.html.twig"
+            update: "@SyliusShop/Ui/Resources/views/Grid/Action/update.html.twig"
+            apply_transition: "@SyliusShop/Ui/Resources/views/Grid/Action/applyTransition.html.twig"
+            links: "@SyliusShop/Ui/Resources/views/Grid/Action/links.html.twig"
+            archive: "@SyliusShop/Ui/Resources/views/Grid/Action/archive.html.twig"
+        filter:
+            string: "@SyliusShop/Ui/Resources/views/Grid/Filter/string.html.twig"
+            boolean: "@SyliusShop/Ui/Resources/views/Grid/Filter/boolean.html.twig"
+            date: "@SyliusShop/Ui/Resources/views/Grid/Filter/date.html.twig"
+            entity: "@SyliusShop/Ui/Resources/views/Grid/Filter/entity.html.twig"
+            money: "@SyliusShop/Ui/Resources/views/Grid/Filter/money.html.twig"
+            exists: "@SyliusShop/Ui/Resources/views/Grid/Filter/exists.html.twig"
+            select: "@SyliusShop/Ui/Resources/views/Grid/Filter/select.html.twig"
+        bulk_action:
+            delete: "@SyliusShop/Ui/Resources/views/Grid/BulkAction/delete.html.twig"

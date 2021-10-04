@@ -33,3 +33,20 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+        
+    app.form.type.supplier:
+        class: App\Form\Type\SupplierType
+        arguments:
+            - "%app.model.supplier.class%"
+            
+    app.menu.supplier:
+        class: App\Menu\SupplierMenuBuilder
+        tags: 
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: buildMenu }
+    
+    app.email_manager.order_notification:
+        class: App\EmailManager\OrderNotificationEmailManager
+        public: true
+        arguments:
+            - "@sylius.email_sender"
+            - "@sylius.context.channel"

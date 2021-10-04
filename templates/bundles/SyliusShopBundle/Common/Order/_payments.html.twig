@@ -16,13 +16,10 @@
                 {{ payment.method }}
             </div>
             <p {{ sylius_test_html_attribute('payment-price') }}>{{ money.format(payment.amount, payment.currencyCode) }}</p>
-            {% if payment.amount != payment.order.total and state == 'processing' %}
-                <i>{{ 'sylius.pay_pal.different_amount'|trans }}</i>
-            {% endif %}
             {% if state != 'cart' %}
-                <p id="payment-status" {{ sylius_test_html_attribute('payment-state') }}>
-                    {% include "@SyliusShop/Common/Order/Label/PaymentState/singlePaymentState.html.twig" with { 'state': state } %}
-                </p>
+            <p id="payment-status" {{ sylius_test_html_attribute('payment-state') }}>
+                {% include "@SyliusShop/Common/Order/Label/PaymentState/singlePaymentState.html.twig" with { 'state': state } %}
+            </p>
             {% endif %}
         </div>
     </div>
